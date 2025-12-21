@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>WS Ansatt Reset</title>
+</head>
+
+<body class="myBody">
+  <h1>WS Ansatt - Danger Zone (slett cache)</h1>
+  Kanskje du bare vil tilbake til AnsattApp?
+  <button class="backButton" onclick="goBack()">Gå Tilbake</button>
+  <br />
+  <hr />
+  Slette cache og logge inn på nytt?<br />
+  <button class="resetUserButton" onclick="resetUser()">Slette cache og logge inn på nytt</button>
+
+  <script>
+    function resetUser() {
+      localStorage.clear();
+      window.location.href = '/index.html';
+    }
+    function goBack() {
+      window.location.href = '/mwsa/';
+    }
+  </script>
+</body>
+<style>
+  .myBody {
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+
+  .resetUserButton {
+    background-color: pink;
+    border: 1px solid black;
+    color: black;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .backButton {
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+
+</html>
