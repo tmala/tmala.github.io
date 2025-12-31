@@ -23,7 +23,9 @@
   <script>
     function resetUser() {
       localStorage.clear();
-      window.location.href = '/index.html';
+      setTimeout(() => {
+        window.location.href = '/mwsa/';
+      }, 500);
     }
     function goBack() {
       window.location.href = '/mwsa/';
